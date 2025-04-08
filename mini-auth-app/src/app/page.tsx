@@ -1,10 +1,5 @@
-import Image from "next/image";
+import { redirect } from 'next/navigation'
 
 export default function Home() {
-  return (
-    <div className="text-3xl font-bold text-blue-600">
-  Tailwind is working! 🎉
-</div>
-
-  );
+  redirect('/login')
 }
