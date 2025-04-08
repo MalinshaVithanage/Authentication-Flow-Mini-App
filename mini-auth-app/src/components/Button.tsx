@@ -11,7 +11,7 @@ export default function Button({ children, loading = false, type = 'button' }: B
     <button
       type={type}
       disabled={loading}
-      className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition disabled:opacity-50"
+      className="w-full text-[18px] font-semibold leading-[1.2]  text-white py-4 my-6 rounded-[8px] bg-gradient-to-r from-[#8B80FF] to-[#5C53BC]"
     >
       {loading ? 'Loading...' : children}
     </button>
