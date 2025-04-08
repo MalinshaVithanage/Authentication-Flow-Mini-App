@@ -19,7 +19,9 @@
 • Form validation: required fields, email format
 
 • Only accept:
+
 o Email: test@visionexdigital.com.au
+
 o Password: password123
 
 • Showed error message if credentials are incorrect
