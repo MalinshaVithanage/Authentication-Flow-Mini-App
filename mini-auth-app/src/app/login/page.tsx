@@ -6,6 +6,7 @@ import { useAuthStore } from "@/store/authStore";
 import Input from "@/components/Input";
 import Button from "@/components/Button";
 import ErrorMessage from "@/components/ErrorMessage";
+import TestimonialCarousel from '@/components/TestimonialCarousel';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -44,7 +45,7 @@ export default function LoginPage() {
 
   return (
     <section className="bg-darkbg h-screen container mx-auto ">
-      <div className=" min-h-screen grid grid-cols-2 ">
+      <div className=" min-h-screen grid grid-cols-2  ">
         <div className="mb-12 mr-[48px] md:mb-0">
           <form
             onSubmit={handleSubmit}
@@ -122,8 +123,8 @@ export default function LoginPage() {
             </div>
           </form>
         </div>
-
-        <div className=" login-background m-4 rounded-[20px] h-[976px]"></div>
+        <TestimonialCarousel />
+      
       </div>
     </section>
   );
