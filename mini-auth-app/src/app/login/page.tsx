@@ -45,8 +45,8 @@ export default function LoginPage() {
 
   return (
     <section className="bg-darkbg h-screen container mx-auto ">
-      <div className=" min-h-screen grid grid-cols-2  ">
-        <div className="mb-12 mr-[48px] md:mb-0">
+      <div className=" min-h-screen grid md:grid-cols-2 ">
+        <div className="mb-12 md:mr-[48px] mx-[10px] md:mb-0">
           <form
             onSubmit={handleSubmit}
             className=" pt-[68px] rounded-xl w-full space-y-5"
@@ -55,10 +55,10 @@ export default function LoginPage() {
               <img src="/images/logo.png" />
 
               <div className="pt-[70px]">
-                <p className="text-[40px] font-medium leading-[1.2]">
+                <p className="text-[24px] sm:text-base md:text-[24px] lg:text-[40px] font-medium leading-[1.2]">
                   Welcome back to Room.me!
                 </p>
-                <p className="text-[20px] font-normal leading-[1.5] mb-3">
+                <p className="text-[14px] sm:text-base md:text-[16px] lg:text-[20px] font-normal leading-[1.5] mb-3">
                   Room.me is an innovative video conference product that
                   revolutionizes virtual meetings.
                 </p>
@@ -98,7 +98,7 @@ export default function LoginPage() {
                   <span>Sign in with Google</span>
                 </button>
               </div>
-              <div className="flex items-center justify-between text-sm text-[#E6E6E6] my-5 text-[14px]">
+              <div className="flex items-center justify-between text-[#E6E6E6] my-5 text-[10px] sm:text-base md:text-[14px] lg:text-[14px]">
                 <label className="flex items-center gap-2">
                   <input
                     type="checkbox"
@@ -114,7 +114,7 @@ export default function LoginPage() {
                 </a>
               </div>
 
-              <div className="text-center text-sm text-white mt-4 text-[16px]">
+              <div className="text-center text-white mt-4 text-[10px] sm:text-base md:text-[14px] lg:text-[16px]">
                 Doesn’t have account?{" "}
                 <a href="#" className="text-white underline ">
                   Sign up

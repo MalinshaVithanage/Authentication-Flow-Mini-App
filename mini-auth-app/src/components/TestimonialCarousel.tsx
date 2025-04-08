@@ -56,8 +56,8 @@ export default function TestimonialCarousel() {
       />
 
       <div className="absolute bottom-0 mx-4 mb-16 p-6 text-white bg-white/30 backdrop-blur-sm rounded-[20px] ">
-        <p className="text-[32px] mb-4 font-normal leading-[1.2]">“{quote}”</p>
-        <p className="text-[24px] mb-4 font-medium leading-[1.2] ">{name} - {role}</p>
+        <p className="text-[16px] sm:text-base md:text-[24px] lg:text-[32px] mb-4 font-normal leading-[1.2]">“{quote}”</p>
+        <p className="text-[10px] sm:text-base md:text-[14px] lg:text-[24px] mb-4 font-medium leading-[1.2] ">{name} - {role}</p>
       </div>
 
      
