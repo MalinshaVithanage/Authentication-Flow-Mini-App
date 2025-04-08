@@ -9,40 +9,29 @@ import ErrorMessage from "@/components/ErrorMessage";
 import TestimonialCarousel from '@/components/TestimonialCarousel';
 
 export default function LoginPage() {
-  const router = useRouter();
-  const login = useAuthStore((state) => state.login);
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
+  const login = useAuthStore(state => state.login)
+  const router = useRouter()
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    setLoading(true)
 
-    if (!email || !password) {
-      setError("Both fields are required.");
-      return;
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      setError("Invalid email format.");
-      return;
-    }
-
-    if (email === "test@visionexdigital.com.au" && password === "password123") {
-      setError("");
-      setLoading(true);
-      setTimeout(() => {
-        login();
-        router.push("/dashboard");
-      }, 1000);
-    } else {
-      setError("Incorrect email or password.");
-    }
-  };
-
+    setTimeout(() => {
+      if (email === 'test@visionexdigital.com.au' && password === 'password123') {
+        login()
+        router.push('/dashboard')
+      } else {
+        setError('Invalid credentials')
+      }
+      setLoading(false)
+    }, 1000)
+  }
+  
   return (
     <section className="bg-darkbg h-screen container mx-auto ">
       <div className=" min-h-screen grid md:grid-cols-2 ">
